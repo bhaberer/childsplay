@@ -1,5 +1,11 @@
 require "childsplay/version"
+require "childsplay/client"
+require "childsplay/donation"
+require "childsplay/donor"
+require "childsplay/event"
 
 module Childsplay
-  # Your code goes here...
+  def list_endpoints(client)
+    client.get('').body
+  end
 end
